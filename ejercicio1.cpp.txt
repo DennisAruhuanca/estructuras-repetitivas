@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Ingrese el valor de n: ";
+    cin >> n;
+
+    int contador = 1;
+    while (contador <= n) {
+        cout << contador * 7 << endl;
+        contador++;
+    }
+
+    return 0;
+}
