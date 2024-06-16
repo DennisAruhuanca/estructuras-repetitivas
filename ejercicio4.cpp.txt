@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double gastos_totales = 0, gasto;
+    char respuesta;
+
+    do {
+        cout << "Ingrese el monto del gasto: ";
+        cin >> gasto;
+        gastos_totales += gasto;
+
+        cout << "¿Desea ingresar otro gasto? (s/n): ";
+        cin >> respuesta;
+    } while (respuesta == 's' || respuesta == 'S');
+
+    cout << "La suma total de los gastos es: [" << gastos_totales << "] euros" << endl;
+    return 0;
+}
