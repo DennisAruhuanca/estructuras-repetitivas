@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main (){
+	int i, n, dc, ne, na, num_a, num_d, proms, nt;
+	i = 1;
+	num_a = 0;
+	num_d = 0;
+	nt = 0;
+	
+	cout << "Ingresa la nota aprobatoria: ";
+	cin >> na;
+	
+	do {
+		cout << "Ingresa el numero de estudiantes: ";
+		cin >> ne;
+		while ( i <= ne){
+			cout << "Ingrese la nota del alumno: ";
+			cin >> n;
+			nt = nt + n;
+			if (n >= na){
+				num_a = num_a + 1;
+			}else{
+				num_d = num_d + 1;
+			}
+			i++;
+		}
+		cout << "Desea seguir ingresando notas, 1 para si, 2 para no: " ;
+		cin >> dc;
+	}while (dc == 1);
+	proms = nt / ne;
+	
+	cout << " El numero de estudiantes aprobados es de: " << num_a << endl;
+	cout << " El numero de estudiantes desaprobados es de: " << num_d << endl;
+	cout << " El promedio del salon es de: " << proms << endl;
+	return 0;
+}
