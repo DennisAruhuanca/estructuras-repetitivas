@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, suma = 0, contador = 0, num;
+    double promedio;
+
+    cout << "Ingrese el valor de n: ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        cout << "Ingrese el número " << i << ": ";
+        cin >> num;
+
+        if (num >= 0) {
+            suma += num;
+            contador++;
+        }
+    }
+
+    promedio = static_cast<double>(suma) / contador;
+    cout << "El promedio de los números no negativos es: [" << promedio << "]" << endl;
+
+    return 0;
+}
