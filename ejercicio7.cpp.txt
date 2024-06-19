@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int n, suma_pares = 0, suma_impares = 0, contador_pares = 0, contador_impares = 0, num;
+    double promedio_pares, promedio_impares;
+
+    cout << "Ingrese el valor de n: ";
+    cin >> n;
+
+    for (int i = 1; i <= n; i++) {
+        cout << "Ingrese el número " << i << ": ";
+        cin >> num;
+
+        if (num % 2 == 0) {
+            suma_pares += num;
+            contador_pares++;
+        } else {
+            suma_impares += num;
+            contador_impares++;
+        }
+    }
+
+    promedio_pares = static_cast<double>(suma_pares) / contador_pares;
+    promedio_impares = static_cast<double>(suma_impares) / contador_impares;
+
+    cout << "Promedio de números pares: [" << promedio_pares << "]" << endl;
+    cout << "Promedio de números impares: [" << promedio_impares << "]" << endl;
+
+    return 0;
+}
